@@ -8,11 +8,11 @@
     ↓
 A ← B
  ↖
-  C ← D ← E
-          ↑
-       feature
-          ↑
-        HEAD
+   C ← D ← E
+           ↑
+         feature
+           ↑
+         HEAD
 ```
 `feature> git rebase master`
 ```
@@ -20,11 +20,11 @@ A ← B
     ↓
 A ← B
      ↖
-      C' ← D' ← E'
-                ↑
-             feature
-                ↑
-              HEAD
+       C' ← D' ← E'
+                 ↑
+              feature
+                  ↑
+               HEAD
 ```
 При возникновении кофликта  - разрешить его в merge tool, добавить в стейдж: `git add %` и продолжить: `git rebase --continue`. Если изменений в рабочей копии нет - то _continue_ не сработает, нужно пропустить шаг: `git rebase --skip`. Если нужно прервать операцию - выполнить `git rebase --abort`.
 
